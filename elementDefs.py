@@ -981,7 +981,7 @@ promethium = pElement( "Promethium", # name
                         )
     
 samarium = pElement( "Samarium", # name
-                    "Pm", # symobl
+                    "Sm", # symobl
                     62, # atomicNumber
                     150.36, # relAtomicMass units: g/mol
                     "1s\N{SUPERSCRIPT TWO}"\

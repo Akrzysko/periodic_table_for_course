@@ -16,6 +16,7 @@ wrappedElements = pTableDefs.wrapAllElements()
 pTableDefs.elementFormat(wrappedElements)
 pTableDefs.periodicTableFormat(wrappedElements)
 
+
 class elementButton(QtWidgets.QWidget):
     def __init__(self, elObj):
         super().__init__()
@@ -43,13 +44,11 @@ class elementButton(QtWidgets.QWidget):
                                                                 self.elObj))
         
         layout.addWidget(self.button)
-    
+
     def element_window(self, checked, elObj):
         self.elWin = newElementWindow.elementWindow(elObj)
         self.elWin.show()
-       
-       
-      
+
 
 class periodicTable(QtWidgets.QWidget):
     def __init__(self, wrappedElObjs):
@@ -70,8 +69,12 @@ class periodicTable(QtWidgets.QWidget):
         self.setLayout(pTableLayout)
         
 
+def main():
+    app = QtWidgets.QApplication(sys.argv)
+    pTable = periodicTable(wrappedElements)
+    pTable.show()
+    app.exec_()        
 
-app = QtWidgets.QApplication(sys.argv)
-pTable = periodicTable(wrappedElements)
-pTable.show()
-app.exec_()        
+
+if __name__ == "__main__":
+    main()
